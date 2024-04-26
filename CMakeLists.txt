@@ -6,5 +6,5 @@ set(FUNCHOOK_BUILD_TESTS OFF)
 
 add_subdirectory(deps/funchook)
 find_package(Vulkan REQUIRED)
-add_library(vkHook SHARED vkhook.cpp ${FUNCHOOK_SOURCES})
+add_library(vkHook SHARED vkhook.cpp vulkaninit.cpp ${FUNCHOOK_SOURCES})
 target_link_libraries(vkHook funchook-shared Vulkan::Vulkan)
